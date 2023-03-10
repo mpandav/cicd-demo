@@ -8,6 +8,6 @@
   <sca:property xmi:id="_QGbXwL8_Ee2Mb_NC2cYSXw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_QGdM8L8_Ee2Mb_NC2cYSXw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
   <sca:component xmi:id="_NuAH0L8_Ee2Mb_NC2cYSXw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NuAH0b8_Ee2Mb_NC2cYSXw" processName="cicd-demo.module.Process"/>
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NuAH0b8_Ee2Mb_NC2cYSXw" processName="cicd-demo.module.Scheduler-Log"/>
   </sca:component>
 </sca:composite>
