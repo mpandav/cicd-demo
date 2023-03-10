@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_NmqwwL8_Ee2Mb_NC2cYSXw" targetNamespace="http://tns.tibco.com/bw/composite/cicd-demo.module" name="cicd-demo.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_QGGnoL8_Ee2Mb_NC2cYSXw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QGPKgL8_Ee2Mb_NC2cYSXw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QGS04L8_Ee2Mb_NC2cYSXw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QGUqEL8_Ee2Mb_NC2cYSXw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QGXtYL8_Ee2Mb_NC2cYSXw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_QGbXwL8_Ee2Mb_NC2cYSXw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_QGdM8L8_Ee2Mb_NC2cYSXw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_NuAH0L8_Ee2Mb_NC2cYSXw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NuAH0b8_Ee2Mb_NC2cYSXw" processName="cicd-demo.module.Process"/>
+  </sca:component>
+</sca:composite>
