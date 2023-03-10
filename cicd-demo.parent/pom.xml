@@ -18,4 +18,11 @@
       </plugin>
     </plugins>
   </build>
+      <distributionManagement>
+	    <snapshotRepository>
+	        <id>snapshots</id>
+	        <name>cbaf9974ea7d-snapshots</name>
+	        <url>http://localhost:8081/artifactory/libs-snapshot</url>
+	    </snapshotRepository>
+	</distributionManagement>
 </project>
