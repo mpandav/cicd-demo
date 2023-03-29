@@ -7,6 +7,14 @@
   <sca:property xmi:id="_QGXtYL8_Ee2Mb_NC2cYSXw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
   <sca:property xmi:id="_QGbXwL8_Ee2Mb_NC2cYSXw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
   <sca:property xmi:id="_QGdM8L8_Ee2Mb_NC2cYSXw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="__TRAIM4yEe2jkN50aq6TrQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="__UKYAM4yEe2jkN50aq6TrQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="__UM0QM4yEe2jkN50aq6TrQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_JrulYMkoEe201tgzkB9s_Q" name="/newGroup/newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_MjjHEMkoEe201tgzkB9s_Q" name="/newGroup/newProperty1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_J3meMMkoEe201tgzkB9s_Q" name="/newGroup1/newProperty" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_KtIYAMkoEe201tgzkB9s_Q" name="/newGroup1/newProperty1" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_KxWwsMkoEe201tgzkB9s_Q" name="/newGroup1/newProperty2" type="XMLSchema:string" publicAccess="true" scalable="true"/>
   <sca:component xmi:id="_NuAH0L8_Ee2Mb_NC2cYSXw" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
     <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_NuAH0b8_Ee2Mb_NC2cYSXw" processName="cicd-demo.module.Scheduler-Log"/>
   </sca:component>
