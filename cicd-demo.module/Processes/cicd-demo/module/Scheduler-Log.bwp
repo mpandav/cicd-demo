@@ -17,9 +17,9 @@
                 <variable>Timer</variable>
             </endingVariables>
         </task>
-        <task name="Log">
+        <task name="LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest">
             <endingVariables>
-                <variable>Log-input</variable>
+                <variable>LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-input</variable>
             </endingVariables>
         </task>
     </tibex:VariableDescriptor>
@@ -327,7 +327,9 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="319"
+                                    <layoutConstraint
+                                    height="50" width="96"
+                                    x="244"
                                     xsi:type="notation:Bounds" y="110"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -344,7 +346,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
                                     <layoutConstraint height="259"
-                                    width="515" xsi:type="notation:Bounds"/>
+                                    width="585" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
                                 <styles xsi:type="notation:FilteringStyle"/>
@@ -355,8 +357,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="365" width="444"
-                                x="30" xsi:type="notation:Bounds" y="20"/>
+                            <layoutConstraint height="259" width="588" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -366,7 +367,8 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="409" width="519" xsi:type="notation:Bounds"/>
+                    <layoutConstraint height="283" width="588" x="1"
+                        xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
                 <styles xsi:type="notation:FilteringStyle"/>
@@ -374,7 +376,7 @@
             </children>
             <styles fontName=".AppleSystemUIFont" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="335" width="860" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="335" width="930" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -384,7 +386,7 @@
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
-            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles lineColor="8421504" xsi:type="notation:ConnectorStyle"/>
             <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
@@ -400,7 +402,8 @@
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable element="ns0:TimerOutputSchema" name="Timer" sca-bpel:internal="true"/>
-        <bpws:variable element="ns1:ActivityInput" name="Log-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:ActivityInput"
+            name="LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -434,10 +437,10 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Timer"/>
                                     <value
-                                    endTime="2023-03-10T18:19:55.394+0530"
+                                    endTime="2023-03-10T13:49:55.394+0100"
                                     intervalUnit="Second"
                                     runOnce="true"
-                                    startTime="2023-03-10T18:19:55.394+0530"
+                                    startTime="2023-03-10T13:49:55.394+0100"
                                     timeInterval="1" xsi:type="generalactivities:Timer"/>
                                 </properties>
                             </activityConfig>
@@ -446,8 +449,9 @@
                 </tibex:receiveEvent>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="Log-input"
-                    name="Log"
+                <tibex:activityExtension
+                    inputVariable="LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-input"
+                    name="LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest-LogTest"
                     tibex:xpdlId="132e98e1-baaa-4e92-9470-803848b7a168" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="TimerToLog"/>

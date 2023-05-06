@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/NewXMLSchema"
+	xmlns:tns="http://www.example.org/NewXMLSchema"
+	elementFormDefault="qualified">
+	<element name="NewElement" type="tns:NewComplexType"/>
+	<complexType name="NewComplexType">
+		<sequence>
+			<element name="NewElement" type="string"/>
+			<element name="NewElement1" type="string"/>
+			<element name="NewElement2" type="string"/>
+		</sequence>
+	</complexType>
+</schema>
