@@ -10,6 +10,7 @@
     <module>../cicd-demo.module</module>
     <module>../cicd-demo</module>
   </modules>
+    
   <build>
     <plugins>
       <plugin>
