@@ -9,6 +9,7 @@
     <relativePath>../cicd-demo.parent</relativePath>
   </parent>
   <artifactId>cicd-demo</artifactId>
+    
   <packaging>bwear</packaging>
   <properties>
     <project.type>None</project.type>
