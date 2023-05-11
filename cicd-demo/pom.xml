@@ -8,8 +8,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <relativePath>../cicd-demo.parent</relativePath>
   </parent>
-  <artifactId>cicd-demo</artifactId>
-    
+  <artifactId>cicd-demo</artifactId>    
   <packaging>bwear</packaging>
   <properties>
     <project.type>None</project.type>
