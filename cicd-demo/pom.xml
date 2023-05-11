@@ -27,6 +27,13 @@
       </plugin>
     </plugins>
   </build>
+<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>b65e471990b0-snapshots</name>
+        <url>http://10.211.55.4:8081/artifactory/libs-snapshot</url>
+    </snapshotRepository>
+</distributionManagement>
   <reporting>
     <plugins>
       <plugin>
@@ -36,6 +43,4 @@
       </plugin>
     </plugins>
   </reporting>
-  
-
 </project>
