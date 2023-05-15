@@ -1,8 +1,8 @@
 pipeline {
     agent none       
     environment { 
-            NAME = "bwce_cicd.jenkins-build"
-            IMAGE = "${BUILD_NUMBER}"
+            IMAGE = "bwce_cicd.jenkins-build"
+            VERSION = "${BUILD_NUMBER}"
             DOCKERHUB_CREDENTIALS=credentials('c4e94794-26a5-4966-8d7b-73bdebe8febd')
         }
 
@@ -58,29 +58,29 @@ pipeline {
             agent {label 'linux'}        
             steps
             {
-                echo '########################### Start Creating Application Image -- ${NAME}:${IMAGE} ###############################'
+                echo '########################### Start Creating Application Image -- ${IMAGE}:${VERSION} ###############################'
                 
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'    //docker hub login       
                 
-                // sh "docker build -t ${NAME}:${IMAGE} ."
+                // sh "docker build -t ${IMAGE}:${VERSION} ."
                 
-                sh 'docker buildx build --platform linux/arm64,linux/amd64 -t mpandav/${NAME}:${IMAGE} --push .'
+                sh 'docker buildx build --platform linux/arm64,linux/amd64 -t mpandav/${IMAGE}:${VERSION} --push .'
                 
-                echo '########################### App Image -- ${NAME}:${IMAGE} -- build Successfully ###############################'
+                echo '########################### App Image -- ${IMAGE}:${VERSION} -- build Successfully ###############################'
 
-                echo '########################### Push an App Image (${NAME}:${IMAGE}) to Registry (DockerHub)... #######################'
+                echo '########################### Push an App Image (${IMAGE}:${VERSION}) to Registry (DockerHub)... #######################'
                             
-                //    sh 'docker tag ${NAME}:${IMAGE} 10.211.55.4:5000/${NAME}:${IMAGE}'  
+                //    sh 'docker tag ${NAME}:${IMAGE} 10.211.55.4:5000/${IMAGE}:${VERSION}'  
                             
-                // sh 'docker tag ${NAME}:${IMAGE} mpandav/${NAME}:${IMAGE}'
+                // sh 'docker tag${IMAGE}:${VERSION} mpandav/${IMAGE}:${VERSION}'
                 // sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'    //push to docker hub registry       
-                // sh 'docker push mpandav/${NAME}:${IMAGE}'
+                // sh 'docker push mpandav/${IMAGE}:${VERSION}'
                               
-                // sh 'docker image rm -f ${NAME}:${IMAGE}'   //clean up of dangling images
+                // sh 'docker image rm -f ${IMAGE}:${VERSION}'   //clean up of dangling images
                               
-                //sh "docker push 10.211.55.4:5000/${NAME}:${IMAGE}". Local Docker Registry
+                //sh "docker push 10.211.55.4:5000/$${IMAGE}:${VERSION}". Local Docker Registry
                 
-                echo '########################### App Image -- ${NAME}:${IMAGE} -- published to Registry successfully... #######################'
+                echo '########################### App Image -- $${IMAGE}:${VERSION} -- published to Registry successfully... #######################'
 
             }
             post {
