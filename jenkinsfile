@@ -122,6 +122,7 @@ pipeline {
                 // exportign variables image and version so it can dynamically updated to manifest for each run
                 sh 'export IMAGE="${IMAGE}"'
                 sh 'export VERSION="${VERSION}"'
+        
                 sh 'envsubst < manifest.yaml | kubectl apply -f -'
                
                 //create k8s deployment for app
