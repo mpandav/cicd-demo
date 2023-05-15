@@ -9,14 +9,28 @@ pipeline {
     stages {
         stage('Checkout - Git') 
         {
-            agent {label 'linux'}        
-            steps {
-
-                   echo '########################### Cloning code from  GitHub... ###########################'
-                    // Get some code from a GitHub repository
-                    git branch: 'main', url: 'https://github.com/mpandav/cicd-demo.git'
-
+            parallel {
+                stage('on Linux ') {
+                    agent {
+                        label "linux"
+                    }
+                    steps {
+                            echo '########################### Cloning code from  GitHub... ###########################'
+                            // Get some code from a GitHub repository
+                            git branch: 'main', url: 'https://github.com/mpandav/cicd-demo.git'
+                    }
                 }
+                stage('on Mac') {
+                    agent {
+                        label "mac"
+                    }
+                    steps {
+                            echo '########################### Cloning code from  GitHub... ###########################'
+                            // Get some code from a GitHub repository
+                            git branch: 'main', url: 'https://github.com/mpandav/cicd-demo.git'
+                    }
+                }
+            }
         }
              
         stage('Test & Build - Application')
@@ -100,17 +114,16 @@ pipeline {
         stage('Deploy App -K8S')
         {
             agent { label 'mac' }
-
             steps
             {
                 echo '####################### Create Deployment for App (${IMAGE}:${VERSION}) in K8S Cluster... #########################'  
 
                 //sh 'kubectl version'
                 // exportign variables image and version so it can dynamically updated to manifest for each run
-                sh 'export IMAGE = ${IMAGE}'
-                sh 'export VERSION = ${VERSION}'
-                sh 'envsubst < manifest.yaml'
-            
+                sh 'export IMAGE="${IMAGE}"'
+                sh 'export VERSION="${VERSION}"'
+                sh 'envsubst < manifest.yaml | kubectl apply -f -'
+               
                 //create k8s deployment for app
                 //sh 'kubectl apply -f manifest.yaml'
              }
