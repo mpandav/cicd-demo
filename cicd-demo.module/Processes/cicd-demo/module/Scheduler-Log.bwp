@@ -503,7 +503,7 @@
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/generalactivities#//Timer"/>
-                                    <value endPolicy=""
+                                    <value
                                     endTime="2023-03-10T13:49:55.394+0100"
                                     intervalUnit="Second"
                                     occurrences="100"
