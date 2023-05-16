@@ -3,6 +3,7 @@ pipeline {
     environment { 
             IMAGE = "bwce_cicd.jenkins-build"
             VERSION = "${BUILD_NUMBER}"
+            PROJECT_NAME = ""
             DOCKERHUB_CREDENTIALS=credentials('c4e94794-26a5-4966-8d7b-73bdebe8febd')
         }
 
@@ -44,7 +45,7 @@ pipeline {
             dir('cicd-demo.parent') 
             {
                 // some block
-                sh "mvn clean test"
+                sh "mvn clean test site"
             }
             echo '###########################Building Application EAR.. ###########################'
             sh "mvn -f cicd-demo.parent/pom.xml package"

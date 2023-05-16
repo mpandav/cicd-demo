@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1684224997991" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1684224997991">
+    
+  <xsd:complexType name="MapperInputType">
+        
+    <xsd:sequence>
+      <xsd:element name="primitive" type="xsd:string"/>
+      <xsd:element name="primitive1" type="xsd:string"/>
+    </xsd:sequence>
+      
+  </xsd:complexType>
+    
+  <xsd:element name="MapperInput" tibex:source="bw.generalactivities.mapper" type="tns:MapperInputType"/>
+  
+</xsd:schema>

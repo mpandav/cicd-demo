@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<completeReportDTO>
+    <moduleResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="testSuiteResultDTO">
+        <moduleInfo>
+            <appName>cicd-demo</appName>
+            <appVersion>1.0</appVersion>
+            <moduleName>cicd-demo.module</moduleName>
+            <moduleVersion>1.0.0.qualifier</moduleVersion>
+        </moduleInfo>
+        <testSetResult xsi:type="testSetResultDTO">
+            <packageName>cicd-demo.module</packageName>
+            <processName>cicd-demo.module.Scheduler-Log</processName>
+            <testCaseResult xsi:type="testCaseResultDTO">
+                <assertionFailure>0</assertionFailure>
+                <assertionResult xsi:type="assertionResultDTO">
+                    <activityName>Mapper</activityName>
+                    <activityOutput></activityOutput>
+                    <assertionMode>Activity</assertionMode>
+                    <assertionStatus>passed</assertionStatus>
+                    <goldInput> &lt;tns1:MapperInput &gt;&lt;primitive &gt;&lt;xsl:value-of select="$Property"  /&gt; &lt;/primitive&gt;&lt;primitive1 &gt;&lt;xsl:value-of select="$Property1"  /&gt; &lt;/primitive1&gt;&lt;/tns1:MapperInput&gt;</goldInput>
+                    <instanceId>bw0a100</instanceId>
+                    <message></message>
+                </assertionResult>
+                <assertions>1</assertions>
+                <assertionsRun>1</assertionsRun>
+                <processFailures>0</processFailures>
+                <testCaseFile>/cicd-demo.module/Tests/cicd-demo.module1.bwt</testCaseFile>
+            </testCaseResult>
+        </testSetResult>
+        <showFailureDetails>false</showFailureDetails>
+    </moduleResult>
+</completeReportDTO>
