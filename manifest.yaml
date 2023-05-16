@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: bwce-cicd-${VERSION}
+        app: bwce-cicd
         appType: tibco
       annotations:
         integration.cloud.tibco.com/hybrid-app: "true"
@@ -24,7 +24,7 @@ spec:
         image: mpandav/${IMAGE}:${VERSION}
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8080
+        - containerPort: 18080
         - containerPort: 8090
         env:
         - name: BW_LOGLEVEL
