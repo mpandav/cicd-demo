@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: bwce-cicd
+        app: bwce-cicd-${VERSION}
         appType: tibco
       annotations:
         integration.cloud.tibco.com/hybrid-app: "true"
