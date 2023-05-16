@@ -65,99 +65,24 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>//cicd-demo.module///newGroup/newProperty1</name>
-			<value>%%/newGroup/newProperty1%%</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>true</isOverride>
-			<useLookupValue>false</useLookupValue>
-			<lookupValue>%%/newGroup/newProperty1%%</lookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//cicd-demo.module///newGroup1/newProperty2</name>
-			<value>%%/newGroup1/newProperty2%%</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>true</isOverride>
-			<useLookupValue>false</useLookupValue>
-			<lookupValue>%%/newGroup1/newProperty2%%</lookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>//cicd-demo.module///newGroup1/newProperty1</name>
-			<value>%%/newGroup1/newProperty1%%</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>true</isOverride>
-			<useLookupValue>false</useLookupValue>
-			<lookupValue>%%/newGroup1/newProperty1%%</lookupValue>
-		</globalVariable>
-		<globalVariable>
 			<name>//cicd-demo.module///newGroup/newProperty</name>
-			<value>%%/newGroup/newProperty%%</value>
+			<value>test</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
-			<isOverride>true</isOverride>
+			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
-			<lookupValue>%%/newGroup/newProperty%%</lookupValue>
+			<lookupValue>test</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//cicd-demo.module///newGroup1/newProperty</name>
-			<value>%%/newGroup1/newProperty%%</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>true</isOverride>
-			<useLookupValue>false</useLookupValue>
-			<lookupValue>%%/newGroup1/newProperty%%</lookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/newGroup/newProperty1</name>
 			<value>test</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
 			<isOverride>false</isOverride>
 			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/newGroup/newProperty</name>
-			<value>test</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/newGroup1/newProperty2</name>
-			<value>test</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/newGroup1/newProperty1</name>
-			<value>test</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/newGroup1/newProperty</name>
-			<value>test</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
+			<lookupValue>test</lookupValue>
 		</globalVariable>
 		<globalVariable>
 			<name>//cicd-demo.module//BW.DEPLOYMENTUNIT.TYPE</name>
