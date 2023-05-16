@@ -20,7 +20,7 @@ spec:
         integration.cloud.tibco.com/hybrid-app-type: bw
     spec:
       containers:
-      - name: bwce-cicd-App$-{VERSION}
+      - name: bwce-cicd-App$-${VERSION}
         image: mpandav/${IMAGE}:${VERSION}
         imagePullPolicy: IfNotPresent
         ports:
