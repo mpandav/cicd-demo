@@ -3,8 +3,8 @@ pipeline {
     environment { 
             IMAGE = "bwce_cicd.jenkins-build"
             VERSION = "${BUILD_NUMBER}"
-            PROJECT_NAME = ""
             DOCKERHUB_CREDENTIALS=credentials('c4e94794-26a5-4966-8d7b-73bdebe8febd')
+            PROJECT_NAME = ""
         }
 
     stages {
@@ -34,7 +34,7 @@ pipeline {
             }
         }
              
-        stage('Test & Build - Application')
+        stage('Test & Build - App')
         {
             agent {label 'linux'}        
            steps
@@ -45,7 +45,7 @@ pipeline {
             dir('cicd-demo.parent') 
             {
                 // some block
-                sh "mvn clean test site"
+                sh "mvn clean test"
             }
             echo '###########################Building Application EAR.. ###########################'
             sh "mvn -f cicd-demo.parent/pom.xml package"
@@ -118,7 +118,7 @@ pipeline {
             agent { label 'mac' }
             steps
             {
-                echo '####################### Create Deployment for App : -- ' +"${IMAGE}:${VERSION}"+'  -- in K8S Cluster... #########################'  
+                echo '####################### Create Deployment for App -- ' +"${IMAGE}:${VERSION}"+'  -- in K8S Cluster... #########################'  
 
                 //sh 'kubectl version'
                 // exportign variables image and version so it can dynamically updated to manifest for each run
