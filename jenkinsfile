@@ -72,18 +72,19 @@ pipeline {
             agent {label 'linux'}        
             steps
             {
-                echo '########################### Start Creating Application Image -- ${IMAGE}:${VERSION} ###############################'
+                echo '########################### Start Creating Application Image -- ' +"${IMAGE}:${VERSION}"+' -- ###############################'
                 
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'    //docker hub login       
                 
                 // sh "docker build -t ${IMAGE}:${VERSION} ."
                 
                 //multi architecture image build support through buildx
+                
                 sh 'docker buildx build --platform linux/arm64,linux/amd64 -t mpandav/${IMAGE}:${VERSION} --push .'
                 
-                echo '########################### App Image -- ${IMAGE}:${VERSION} -- build Successfully ###############################'
+                echo '########################### App Image --  ' +"${IMAGE}:${VERSION}"+'  -- build Successfully ###############################'
 
-                echo '########################### Push an App Image (${IMAGE}:${VERSION}) to Registry (DockerHub)... #######################'
+                echo '########################### Push an App Image --  ' +"${IMAGE}:${VERSION}"+'  -- to Registry (DockerHub)... #######################'
                             
                 // sh 'docker tag ${NAME}:${IMAGE} 10.211.55.4:5000/${IMAGE}:${VERSION}'  
                             
@@ -95,7 +96,7 @@ pipeline {
                               
                 //sh "docker push 10.211.55.4:5000/$${IMAGE}:${VERSION}". Local Docker Registry
                 
-                echo '########################### App Image -- ${IMAGE}:${VERSION} -- published to Registry successfully... #######################'
+                echo '########################### App Image --  ' +"${IMAGE}:${VERSION}"+'  -- published to Registry successfully... #######################'
 
             }
             post {
@@ -116,7 +117,7 @@ pipeline {
             agent { label 'mac' }
             steps
             {
-                echo '####################### Create Deployment for App (${IMAGE}:${VERSION}) in K8S Cluster... #########################'  
+                echo '####################### Create Deployment for App : -- ' +"${IMAGE}:${VERSION}"+'  -- in K8S Cluster... #########################'  
 
                 //sh 'kubectl version'
                 // exportign variables image and version so it can dynamically updated to manifest for each run
