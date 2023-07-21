@@ -19,6 +19,19 @@ spec:
         integration.cloud.tibco.com/hybrid-app-port: "8090"
         integration.cloud.tibco.com/hybrid-app-type: bw
     spec:
+      volumes:
+      - name: tibco
+        emptyDir: {}
+      securityContext:
+        capabilities:
+          drop:
+          - ALL
+          priviledged: false
+          readOnlyFilesystem: true
+          runAsRoot: true
+        volumeMounts:
+        - name: tibco
+          mountPath: /project/tibco/
       containers:
       - name: bwce-cicd-app-${VERSION}
         image: mpandav/${IMAGE}:${VERSION}
@@ -38,6 +51,7 @@ spec:
         resources:
           limits:
             memory: 1024Mi
+            cpu: 0.25m
           requests:
             memory: 1024Mi
         livenessProbe:
@@ -58,3 +72,4 @@ spec:
             port: 8090
           initialDelaySeconds: 5
           periodSeconds: 5
+
