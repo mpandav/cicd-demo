@@ -28,13 +28,13 @@ spec:
         - containerPort: 8090
         env:
         - name: BW_LOGLEVEL
-          value: INFO|DEBUG|ERROR
+          value: ERROR
         - name: CONSUL_SERVER_URL
           value: "http://10.211.55.4:8500/"
         - name: APP_CONFIG_PROFILE
           value: "DEV"
         - name: BW_APP_MONITORING_CONFIG
-          value: ""
+          value: '{"url":"http://10.244.0.231:8080"}'
         resources:
           limits:
             memory: 1024Mi
