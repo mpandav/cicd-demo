@@ -14,5 +14,8 @@ As part of TIBCO CD/CD in Box this repo contains very simple Scheduler Applicati
 ![image](https://github.com/mpandav/cicd-demo/assets/38240734/4f1d4dfa-4e02-4d53-a287-2c4ccd847f4d)
 
 
+## Demo Architecture
+![image](https://github.com/mpandav/cicd-demo/assets/38240734/df37661e-1780-4a68-8c90-fac89df7bc0e)
 
+## Steps to setup
 
