@@ -3,7 +3,7 @@ pipeline {
     environment { 
             IMAGE = "bwce_cicd.jenkins-build"
             VERSION = "${BUILD_NUMBER}"
-            DOCKERHUB_CREDENTIALS=credentials('c4e94794-26a5-4966-8d7b-73bdebe8febd')
+            DOCKERHUB_CREDENTIALS=credentials('docker-hub-personal')
             PROJECT_NAME = ""
         }
 
