@@ -32,7 +32,7 @@ pipeline {
            // Run Maven on a Unix agent.
             echo '########################### Perform Unit Tests... ###########################'
     
-            dir('cicd-demo.parent') 
+            dir('src/cicd-demo.parent') 
             {
                 sh "pwd"
                 // some block
