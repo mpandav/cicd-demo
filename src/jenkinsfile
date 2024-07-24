@@ -15,11 +15,6 @@ pipeline {
                     agent {
                         label "linux"
                     }
-                    steps {
-                            echo '########################### Cloning code from  GitHub... ###########################'
-                            // Get some code from a GitHub repository
-                            git branch: 'main', url: 'https://github.com/mpandav/cicd-demo.git'
-                    }
                 }
                 stage('on Mac') {
                     agent {
