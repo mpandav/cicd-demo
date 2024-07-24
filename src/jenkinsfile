@@ -34,6 +34,7 @@ pipeline {
     
             dir('cicd-demo.parent') 
             {
+                sh "pwd"
                 // some block
                 sh "mvn clean test"
             }
