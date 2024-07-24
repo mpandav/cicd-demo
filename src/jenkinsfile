@@ -11,11 +11,6 @@ pipeline {
         stage('Checkout - Git') 
         {
             parallel {
-                stage('on Linux ') {
-                    agent {
-                        label "linux"
-                    }
-                }
                 stage('on Mac') {
                     agent {
                         label "mac"
