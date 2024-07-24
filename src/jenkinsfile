@@ -36,7 +36,7 @@ pipeline {
              
         stage('Test & Build - App')
         {
-            agent {label 'linux'}        
+            agent {label 'mac'}        
            steps
            {
            // Run Maven on a Unix agent.
@@ -55,7 +55,7 @@ pipeline {
                
         stage('Publish App Artifacts')
         {
-            agent {label 'linux'}        
+            agent {label 'mac'}        
             steps
             {
                 echo '########################### Move deployables to Artifacotory Server.. ###########################'  
@@ -70,7 +70,7 @@ pipeline {
                
         stage('Build & Push - App Image')
         {
-            agent {label 'linux'}        
+            agent {label 'mac'}        
             steps
             {
                 echo '########################### Start Creating Application Image -- ' +"${IMAGE}:${VERSION}"+' -- ###############################'
