@@ -24,7 +24,7 @@ pipeline {
             }
         }
              
-        stage('Test & Build - App')
+        stage('Unit Test ')
         {
             agent {label 'mac'}        
            steps
@@ -38,13 +38,21 @@ pipeline {
                 // some block
                 sh "mvn clean"
             }
+            }
+        }
+
+    stage(' App Build ')
+        {
+            agent {label 'mac'}        
+           steps
+           {
+           // Run Maven on a Unix agent.
             echo '###########################Building Application EAR.. ###########################'
             sh "mvn -f src/cicd-demo.module.application.parent package"
             }
         }
-              
                
-        stage('Publish App Artifacts')
+        stage('Artifactory')
         {
             agent {label 'mac'}        
             steps
@@ -58,7 +66,7 @@ pipeline {
             }
         }
                
-        stage('Build & Push - App Image')
+        stage('App Image Processing')
         {
             agent {label 'mac'}        
             steps
@@ -109,7 +117,7 @@ pipeline {
         }
                 
                 
-        stage('Deploy App -K8S')
+        stage('K8s Deplyoment')
         {
             agent { label 'mac' }
             steps
