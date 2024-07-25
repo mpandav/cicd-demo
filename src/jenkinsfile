@@ -99,7 +99,7 @@ pipeline {
             post {
                 success {
                 //junit '**/target/surefire-reports/TEST-*.xml'#
-                dir('cicd-demo'){
+                dir('src/cicd-demo.module.application'){
                      // some block
                      archiveArtifacts 'target/*.*'
                 }
