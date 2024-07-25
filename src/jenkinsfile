@@ -32,7 +32,7 @@ pipeline {
            // Run Maven on a Unix agent.
             echo '########################### Perform Unit Tests... ###########################'
     
-            dir('src/cicd-demo.parent') 
+            dir('src/cicd-demo.module.application.parent') 
             {
                 sh "ls -lrt"
                 // some block
