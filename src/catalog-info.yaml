@@ -1,0 +1,19 @@
+iVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "bwce-cicd-demo-jenkins"
+  description: "This integrates everything with everything"
+  links:
+  - title: TIBCO Home
+    url: https://www.tibco.com/
+  - title: TIBCO Documentation
+    url: https://docs.tibco.com/
+  annotations:
+    github.com/project-slug: mpandav/cicd-demo
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: bwce-cicd-demo-jenkins
+    jenkins.io/job-full-name: Build_Deploy_BWCE_TIBCO_PLATFORM
+spec:
+  type: service
+  lifecycle: development
+  owner: "group:default/tibco-templates"
