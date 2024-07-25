@@ -63,9 +63,11 @@ pipeline {
             agent {label 'mac'}        
             steps
             {
+             dir('src/') 
+            {
                 sh "pwd"
                 sh "ls -lrt"
-
+    
                 echo '########################### Start Creating Application Image -- ' +"${IMAGE}:${VERSION}"+' -- ###############################'
                 
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'    //docker hub login       
@@ -91,6 +93,7 @@ pipeline {
                 //sh "docker push 10.211.55.4:5000/$${IMAGE}:${VERSION}". Local Docker Registry
                 
                 echo '########################### App Image --  ' +"${IMAGE}:${VERSION}"+'  -- published to Registry successfully... #######################'
+            }
 
             }
             post {
