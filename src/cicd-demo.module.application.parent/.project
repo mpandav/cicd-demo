@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>cicd-demo.parent</name>
+	<name>cicd-demo.module.application.parent</name>
 	<comment></comment>
 	<projects>
 	</projects>

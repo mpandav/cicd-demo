@@ -3,14 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tibco.bw</groupId>
-  <artifactId>cicd-demo.parent</artifactId>
+  <artifactId>cicd-demo.module.application.parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
     <module>../cicd-demo.module</module>
-    <module>../cicd-demo</module>
-  </modules>  
-    
+    <module>../cicd-demo.module.application</module>
+  </modules>
   <build>
     <plugins>
       <plugin>
@@ -19,7 +18,4 @@
       </plugin>
     </plugins>
   </build>
- <distributionManagement>
-
-</distributionManagement>
 </project>
