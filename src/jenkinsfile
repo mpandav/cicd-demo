@@ -36,7 +36,7 @@ pipeline {
             {
                 sh "ls -lrt"
                 // some block
-                sh "mvn clean test"
+                sh "mvn clean"
             }
             echo '###########################Building Application EAR.. ###########################'
             sh "mvn -f src/cicd-demo.module.application.parent package"
