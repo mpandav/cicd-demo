@@ -121,10 +121,10 @@ pipeline {
                 sh 'export IMAGE="${IMAGE}"'
                 sh 'export VERSION="${VERSION}"'
         
-                sh 'envsubst < manifest.yaml | kubectl apply -f -'
+                sh 'envsubst < src/manifest.yaml | kubectl apply -f -'
                
                 //create k8s deployment for app
-                //sh 'kubectl apply -f manifest.yaml'
+                //sh 'kubectl apply -f src/manifest.yaml'
              }
         }
 
