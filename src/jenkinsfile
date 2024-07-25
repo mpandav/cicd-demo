@@ -39,7 +39,7 @@ pipeline {
                 sh "mvn clean test"
             }
             echo '###########################Building Application EAR.. ###########################'
-            sh "mvn -f cicd-demo.parent/pom.xml package"
+            sh "mvn -f src/cicd-demo.module.application.parent package"
             }
         }
               
@@ -50,7 +50,7 @@ pipeline {
             steps
             {
                 echo '########################### Move deployables to Artifacotory Server.. ###########################'  
-                dir('cicd-demo.parent') 
+                dir('src/cicd-demo.module.application.parent') 
                 {
                     // some block 
                     sh "mvn deploy "
