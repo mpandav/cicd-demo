@@ -52,8 +52,7 @@ pipeline {
                 echo '########################### Move deployables to Artifacotory Server.. ###########################'  
                 dir('src/cicd-demo.module.application.parent') 
                 {
-                    // some block 
-                    sh "mvn deploy "
+                    sh "mvn package install"
                 }
                 echo '########################### Artifacts are published to artifactory server... ###########################' 
             }
